@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Peralta&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Peralta", sans-serif;
+  color: rgba(253, 248, 248, 0.959);
+
+}
+
+body {
+  background-image: url("/images/background_for_me_1.png");
+  background-size: cover;
+  margin: 20px;
+}
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexAround {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flexBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*Nouvelle test de grid*/
+
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  row-gap: 50px;
+  column-gap: 20px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "item0_logo item1_bare"
+    "item4 item5_img2";
+  width: 100%;
+}
+
+.item0_logo {
+  justify-self: stretch;
+  align-self: center;
+  grid-area: item0_logo;
+
+}
+
+.item1_bare {
+  justify-self: stretch;
+  align-self: center;
+  grid-area: item1_bare;
+}
+
+.item4 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 20px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "item4_0"
+    "item4_1";
+  grid-area: item4;
+}
+
+.item4_0 {
+  justify-self: stretch;
+  align-self: center;
+  grid-area: item4_0;
+}
+
+.item4_1 {
+  justify-self: stretch;
+  align-self: center;
+  grid-area: item4_1;
+}
+
+.item5_img2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.25fr 1fr;
+  justify-self: center;
+  align-self: center;
+  grid-area: item5_img2;
+  gap: 20px;
+
+  h4 {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  img {
+    width: 100px;
+  }
+
+  .link_icon {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    row-gap: 20px;
+  }
+}
