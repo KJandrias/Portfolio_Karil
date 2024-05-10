@@ -39,7 +39,7 @@ body {
 
 .container {  display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 25% 100% 25%;
+    grid-template-rows: 19% 100% 25%;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -57,7 +57,7 @@ body {
   }
   
   .item1_bare {
-    justify-self: stretch;
+    justify-self: normal;
     align-self: center;
     grid-area: item1_bare;
   }
@@ -103,7 +103,7 @@ body {
   .item4 {  display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 0px 0px;
+    row-gap: 20px;
     grid-auto-flow: row;
     grid-template-areas:
       "item4_0"
